@@ -1,0 +1,51 @@
+{{!< default}}
+
+{{> nav}}
+
+{{> header}}
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12 page-tag">
+      <h1>Tag: <span>{{tag.name}}</span></h1>
+    </div>
+  </div>
+</div>
+<section class="posts">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+          {{! Each post will be output using this markup }}
+          {{#foreach posts}}
+            <article class="{{post_class}} non-visible">
+              <div class="post-cover hide" data-url="{{@blog.url}}{{url}}" data-post="{{id}}" {{#if @blog.cover}}data-image="{{@blog.cover}}"{{/if}}>
+                  {{content words="0"}}
+              </div>
+              <header>
+                <div class="post-featured"><span class="fa fa-star"></span></div>
+                <h1 class="post-title"><a href="{{url}}">{{title}}</a></h1>
+                <div class="post-meta">
+                  <time datetime="{{date format='DD-MM-YYYY'}}" class="post-day-month">{{date format="DD MMM YYYY"}}</time>
+                </div>
+              </header>
+              <div class="post-excerpt">
+                      {{excerpt words="80"}}&hellip;
+              </div>
+              <div class="post-more">
+                <a href="{{url}}">Continue Reading</a>
+              </div>
+            </article>
+          {{/foreach}}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="posts-pagination">
+  <div class="container">
+    <div class="col-lg-10 col-lg-push-1">
+        {{!! After all the posts, we have the previous/next pagination links }}
+        {{pagination}}
+    </div>
+  </div>
+</section>

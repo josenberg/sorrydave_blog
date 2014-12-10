@@ -1,0 +1,131 @@
+
+@color: #00CA92;
+@dark-color: darken(@color, 10%);
+@light-color: lighten(@color, 10%);
+
+.navbar-default {
+  .navbar-nav>li>a {
+    &:hover,
+    &:focus {
+      color: @dark-color;
+    }
+  }
+
+  .navbar-toggle {
+    &:hover,
+    &:focus {
+      background-color: @dark-color;
+    }
+  }
+}
+.blog-header {
+  background-color: @color;
+}
+
+.blog-title {
+  a {
+    &:hover,
+    &:focus {
+      color: @color;
+    }
+  }
+}
+
+.nav-top {
+  background-color: @color;
+  a {
+    &:hover,
+    &:focus {
+      color: @dark-color;
+    }
+  }
+}
+
+a {
+  color: @color;
+  &:hover,
+  &:focus {
+    color: @dark-color;
+  }
+}
+
+blockquote {
+  border-left: 5px solid @color;
+}
+
+.btn-dark {
+  background-color: rgba(red(@color), green(@color), blue(@color),.5);
+}
+.btn-dark:hover {
+  background-color: rgba(red(@color), green(@color), blue(@color),.9);
+}
+
+.post-title {
+  a {
+    &:hover,
+    &:focus {
+      color: @color;
+    }
+  }
+}
+
+.post-featured {
+  color: @color;
+  &:after {
+    border-color: transparent @color transparent transparent;
+  }
+
+  &:before {
+    border-color: transparent transparent transparent @color;
+  }
+}
+
+.post-meta {
+
+  a {
+    &:hover,
+    &:focus {
+      color: @dark-color;
+    }
+  }
+  .fa {
+    color: @color;
+  }
+}
+
+.post-tags {
+  a {
+    .post-footer &,
+    .blog-tags & {
+      &:hover,
+      &:focus {
+        background-color: @color;
+      }
+    }
+  }
+}
+
+.post-more {
+  a {
+    &:hover,
+    &:focus {
+      color: @color;
+    }
+  }
+}
+
+.page-tag {
+  span {
+    color: @color;
+  }
+}
+
+
+.blog-footer {
+  a {
+    &:hover,
+    &:focus {
+      color: @light-color;
+    }
+  }
+}

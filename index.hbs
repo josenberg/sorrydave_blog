@@ -1,0 +1,58 @@
+{{!< default}}
+
+{{> nav}}
+
+{{> header}}
+
+{{#contentFor "meta"}}
+  <!-- Classic Meta Tags -->
+  <title>Gentlenode Studio | Journal</title>
+  <meta name="description" content="Add your description.">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Sorry Dave"/>
+  <meta property="og:description" content="Sorry Dave é onde trazemos o melhor conteúdo para entreter e informar sobre tudo o que há de interessante no mundo da arte, cultura pop e comunicação."/>
+  <meta property="og:site_name" content="Sorry Dave"/>
+  <meta property="og:url" content="http://sorrydave.com.br/"/>
+  <meta property="og:image" content="http://sorrydave.com.br/content/images/2014/Sep/005.jpg"/>  
+{{/contentFor}}
+
+<section class="posts">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        {{! Each post will be output using this markup }}
+        {{#foreach posts}}
+        <article class="{{post_class}} non-visible">
+          <div class="post-cover hide" data-url="{{@blog.url}}{{url}}" data-post="{{id}}" {{#if @blog.cover}}data-image="{{@blog.cover}}"{{/if}}>
+            {{content words="0"}}
+          </div>
+          <header>
+            <div class="post-featured"><span class="fa fa-star"></span></div>
+            <h1 class="post-title"><a href="{{url}}">{{title}}</a></h1>
+            <div class="post-meta">
+              <time datetime="{{date format='DD-MM-YYYY'}}" class="post-day-month">{{date format="DD MMM YYYY"}}</time>
+            </div>
+          </header>
+          <div class="post-excerpt">
+            {{excerpt words="80"}}&hellip;
+          </div>
+          <div class="post-more">
+            <a href="{{url}}">Continue Reading</a>
+          </div>
+        </article>
+        {{/foreach}}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="posts-pagination">
+  <div class="container">
+    <div class="col-lg-10 col-lg-push-1">
+        {{!! After all the posts, we have the previous/next pagination links }}
+        {{pagination}}
+    </div>
+  </div>
+</section>

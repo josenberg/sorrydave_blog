@@ -1,0 +1,75 @@
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #41c4a9;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: #41c4a9;
+}
+.blog-header {
+  background-color: #68d0bb;
+}
+.blog-title a:hover,
+.blog-title a:focus {
+  color: #68d0bb;
+}
+.nav-top {
+  background-color: #68d0bb;
+}
+.nav-top a:hover,
+.nav-top a:focus {
+  color: #41c4a9;
+}
+a {
+  color: #68d0bb;
+}
+a:hover,
+a:focus {
+  color: #41c4a9;
+}
+blockquote {
+  border-left: 5px solid #68d0bb;
+}
+.btn-dark {
+  background-color: rgba(104, 208, 187, 0.5);
+}
+.btn-dark:hover {
+  background-color: rgba(104, 208, 187, 0.9);
+}
+.post-title a:hover,
+.post-title a:focus {
+  color: #68d0bb;
+}
+.post-featured {
+  color: #68d0bb;
+}
+.post-featured:after {
+  border-color: transparent #68d0bb transparent transparent;
+}
+.post-featured:before {
+  border-color: transparent transparent transparent #68d0bb;
+}
+.post-meta a:hover,
+.post-meta a:focus {
+  color: #41c4a9;
+}
+.post-meta .fa {
+  color: #68d0bb;
+}
+.post-footer .post-tags a:hover,
+.blog-tags .post-tags a:hover,
+.post-footer .post-tags a:focus,
+.blog-tags .post-tags a:focus {
+  background-color: #68d0bb;
+}
+.post-more a:hover,
+.post-more a:focus {
+  color: #68d0bb;
+}
+.page-tag span {
+  color: #68d0bb;
+}
+.blog-footer a:hover,
+.blog-footer a:focus {
+  color: #8fdccd;
+}

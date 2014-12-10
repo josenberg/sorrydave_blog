@@ -1,0 +1,24 @@
+<section class="nav-top navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="{{@blog.url}}" class="navbar-brand {{#if @blog.logo }}logo{{/if}}">
+        {{#if @blog.logo }}
+          <img src="{{@blog.logo}}" alt="{{@blog.title}}"/>
+        {{else}}
+            {{@blog.title}}
+        {{/if}}
+      </a>
+    </div>
+    <nav class="collapse navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{{@blog.url}}/about/">About</a></li>        
+      </ul>
+    </nav>
+  </div>
+</section>

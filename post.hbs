@@ -1,0 +1,114 @@
+{{!< default}}
+
+{{> nav}}
+
+{{#post}}
+  <link rel="image_src" href="{{@blog.url}}{{asset 'img/logo.png'}}" />
+ 
+  <section class="blog-post-header" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
+    <div class="wrapper">
+      <div class="post-title">
+        <h1>{{title}}</h1>
+      </div>
+      <div class="post-meta">
+        <time datetime="{{date format='DD-MM-YYYY'}}" class="post-day-month">{{date format="DD MMM YYYY"}}</time>
+      </div>
+      <div class="post-share colors-hover">
+        <a href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
+           onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+          <span class="fa fa-twitter"></span>
+        </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+           onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+          <span class="fa fa-facebook"></span>
+        </a>
+        <a href="https://plus.google.com/share?url={{url absolute="true"}}"
+           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+          <span class="fa fa-google-plus"></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <article class="{{post_class}}">
+          <div class="post-content">
+              {{content}}
+          </div>
+          <footer class="post-footer">
+          {{#if tags}}
+            <div class="post-tags">
+                <span class="fa fa-tags"></span> {{tags separator="&nbsp;&nbsp;"}}
+            </div>
+          {{/if}}
+          <div class="fb-like" data-href="https://www.facebook.com/pages/Sorry-Dave/483768988425245?fref=ts" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+          </footer>
+        </article>
+        <section class="author">
+            {{#if author.image}}
+              <img src="{{author.image}}" />
+            {{/if}}
+          <h3>{{author.name}}</h3>
+          <p>{{author.bio}}</p>
+          <ul class="author-meta clearfix">
+              {{#if author.location}}<li><span class="fa fa-map-marker"></span> {{author.location}}</li>{{/if}}
+              {{#if author.website}}<li><span class="fa fa-link"></span>  <a href="{{author.website}}">{{author.website}}</a></li>{{/if}}
+          </ul>
+          <div class="clearfix"></div>
+        </section>
+      </div>
+    </div>
+    <div class="row" style="background-color: white; margin-top: 10px; padding-top: 10px;">
+      <div class="col-lg-4">    
+        <div class='post-destaque'> 
+          <a href="http://sorrydave.com.br/ocidente-x-oriente/">  
+            <img src="http://i.imgur.com/6jlteS6.png" style="width: 100%; min-height:269px; max-height: 269px; clip: auto;"  /> 
+          </a>
+          <br />
+          <h3> 
+            <a href="http://sorrydave.com.br/ocidente-x-oriente/">  Ocidente x Oriente  </a>
+          </h3>
+          <p> As diferenças sociais e culturais entre os chineses e os alemães são incríveis e a designer utilizou apenas suas próprias observações de maneira cômica para reproduzir o que achou mais interessante... </p>
+        </div>
+        
+      </div>
+      <div class="col-lg-4">    
+        <div class='post-destaque'> 
+          <a href="http://sorrydave.com.br/campanha-contra-a-violencia/"> 
+            <img src="http://i.imgur.com/Ybp1vUT.png" style="width: 100%; min-height:269px; max-height: 269px; clip: auto;"  /> 
+          </a>
+          <br />
+          <!-- <img src="http://sorrydave.com.br/content/images/2014/Sep/featured-image-1.jpg" style="width: 100%; min-height:269px; max-height: 269px" /> <br />-->          
+          <h3> 
+            <a href="http://sorrydave.com.br/campanha-contra-a-violencia/"> 
+              Campanha contra a violência
+            </a>
+           </h3>
+          <p> As incríveis e impactantes imagens a seguir foram desenvolvidas para a Campanha contra a violência para o CRAVV 
+            (Centro de Referência e Apoio à Vítima de Violência) do Ceará feita pelo modelador de São Paulo Marcel Fukuwara. </p>
+        </div>
+      </div>
+      <div class="col-lg-4">    
+        <div class='post-destaque'> 
+          <!-- <img src="http://sorrydave.com.br/content/images/2014/Sep/featured-image-21.jpg" style="width: 100%; min-height:269px; max-height: 269px"  /> <br /> -->
+          <a href="http://sorrydave.com.br/o-inferno-dos-irmaos-chapman/">
+            <img src="http://sorrydave.com.br/content/images/2014/Sep/featured-image-24.jpg" style="width: 100%; min-height:269px; max-height: 269px; clip: auto;"  /> 
+          </a>
+          <br />
+          <h3> 
+            <a href="http://sorrydave.com.br/o-inferno-dos-irmaos-chapman/">  O inferno dos irmãos Chapman </a>
+          </h3>
+          <p> O que aconteceria se tivesse franquias do McDonalds no inferno? Os irmãos ingleses Jake e Dinos Chapman
+           são artistas plásticos que são conhecidos por criarem as obras mais macabras da atualidade. Nas fotos a seguir está retratado "In Our Dreams We Have Seen Another World", . </p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-10 col-lg-offset-1">
+        <div id="disqus_thread"></div>
+      </div>
+    </div>
+    
+{{/post}}
