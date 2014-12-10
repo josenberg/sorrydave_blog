@@ -1,16 +1,11 @@
+Thema do site Sorry Dave, desenvolvido em Ghost
+================================================
 
-Change Theme
-============
-Argon is designed to allow you to customize theme colors.
-To use particular theme, open default.hbs file using text editor (Notepad, Notepad++),
-then change "alternate stylesheet" to "stylesheet" of your favored theme.
+Esse tema foi baseado no thema Argon, qualquer contribuição 
+sera avaliada e se for maneira aceitaremos o pull request, 
 
-For example, if you want to use "green" theme, change:
-<link rel="alternate stylesheet" title="green" type="text/css" href="{{asset "css/theme-green.css"}}" />
+Esse thema esta sob a licença GNU GLP
 
-become
+acessem o site para ver como ela fica live.
 
-<link rel="stylesheet" title="green" type="text/css" href="{{asset "css/theme-green.css"}}" />
-
-
-Enjoy!
+http://www.sorrydave.com.br
